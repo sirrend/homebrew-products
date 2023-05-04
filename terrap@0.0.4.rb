@@ -11,7 +11,7 @@ class TerrapAT004 < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.4/terrap-cli_0.0.4_darwin_arm64.tar.gz"
-      sha256 "5d6595a18c2c2e93e27a38bca396549128843f89f71a9eea43aecc8dde7152ee"
+      sha256 "c2e9c708b3f103ade5102c21f8af56507158885a00c48ebb81779d05b122dabb"
 
       def install
         bin.install "terrap"
@@ -19,7 +19,7 @@ class TerrapAT004 < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.4/terrap-cli_0.0.4_darwin_amd64.tar.gz"
-      sha256 "2550d055a7168a359b19286343cd56a6c2442a511914825869169d06dce71aaf"
+      sha256 "6b3f0ae778d0a7fd44e020c08ce42f6d9f1fc08c115a08a5074d1b3ffa3e4d52"
 
       def install
         bin.install "terrap"
@@ -30,7 +30,7 @@ class TerrapAT004 < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.4/terrap-cli_0.0.4_linux_armv6.tar.gz"
-      sha256 "e19595f64b4e6a31e3dfffe71e5a75becb6133d0c9268fdcd2f00047ae9a20d5"
+      sha256 "a1e413cabc5b6babde013438699d90deb86408605ee6296c39d450b41e471a1b"
 
       def install
         bin.install "terrap"
@@ -38,7 +38,7 @@ class TerrapAT004 < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.4/terrap-cli_0.0.4_linux_arm64.tar.gz"
-      sha256 "5a51035b635b8b30456945e8bc5b11e4a12e4abaa6dccd56b5b7239ac93fac51"
+      sha256 "e8bf0bb6026aacbe8a44b635cfdb0bfc8ea343ff9a1f4c64f7fe17c9f48b5360"
 
       def install
         bin.install "terrap"
@@ -46,7 +46,7 @@ class TerrapAT004 < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.4/terrap-cli_0.0.4_linux_amd64.tar.gz"
-      sha256 "d97b9e37eddaaa0aa0f8a4b1d7ab8f04824063ddcf1e83470974709ad28b40f8"
+      sha256 "32a9ba5879df6a4ed8d7bf4aac4467ac0c8cf060a09b6bdb0f6d86311a76a6b2"
 
       def install
         bin.install "terrap"
