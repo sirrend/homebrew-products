@@ -5,21 +5,21 @@
 class Terrap < Formula
   desc "CLI utility for finding any change between Terraform schemas"
   homepage "https://github.com/sirrend/terrap-cli.git"
-  version "0.0.4"
+  version "0.0.1"
   license "Apache2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.4/terrap-cli_0.0.4_darwin_arm64.tar.gz"
-      sha256 "d1ed7e611fae179d2a45e3ee9096546060b00add76f117918d3fc32a1c925fc6"
+      url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.1/terrap-cli_0.0.1_darwin_arm64.tar.gz"
+      sha256 "bf77c4232dd6f32b0876143848235cdb9aa6bebebb2b41797d99a24367b83b13"
 
       def install
         bin.install "terrap"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.4/terrap-cli_0.0.4_darwin_amd64.tar.gz"
-      sha256 "2ef20e8223be307c51ffb05b409fe22de4027ef82c663dfaf906006c68ee49df"
+      url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.1/terrap-cli_0.0.1_darwin_amd64.tar.gz"
+      sha256 "c3a745a0df176206f3dd7c32cb5477a9ef276f7a20eb283fc8cf5317402f4b19"
 
       def install
         bin.install "terrap"
@@ -28,25 +28,25 @@ class Terrap < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.4/terrap-cli_0.0.4_linux_amd64.tar.gz"
-      sha256 "e569662afe1fa38f57ea4df0a4b5c976f3e0e899a09ac3fcad935fcd576ca99f"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.1/terrap-cli_0.0.1_linux_armv6.tar.gz"
+      sha256 "13168a4fd78af9ad568907e7642baacfb2131c95eda9cc20d1877dd00539fc54"
 
       def install
         bin.install "terrap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.4/terrap-cli_0.0.4_linux_arm64.tar.gz"
-      sha256 "655d735babe28c47af995b501909818270423cc46be291438e5af1b0652bcb40"
+      url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.1/terrap-cli_0.0.1_linux_arm64.tar.gz"
+      sha256 "bbe2b3030c0d632e4f41834795c3d0a98b98fb65264e68bcde1407a74694f0b5"
 
       def install
         bin.install "terrap"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.4/terrap-cli_0.0.4_linux_armv6.tar.gz"
-      sha256 "c034dce2e20a7faad91f701f6059b6715a13c484a663064c86c00cf67767ddfd"
+    if Hardware::CPU.intel?
+      url "https://github.com/sirrend/terrap-cli/releases/download/v0.0.1/terrap-cli_0.0.1_linux_amd64.tar.gz"
+      sha256 "8890f4b8e626d3cc298db83dbf21d014d8de43f6b33899a5d6057205909dae56"
 
       def install
         bin.install "terrap"
