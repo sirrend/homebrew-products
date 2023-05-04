@@ -1,1 +1,1 @@
-# homebrew-sirrend
+# homebrew-products
